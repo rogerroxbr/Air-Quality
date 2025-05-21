@@ -1,0 +1,14 @@
+[project]
+name = "air-quality"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "ipykernel>=6.29.5",
+    "ipython>=9.2.0",
+    "pandas>=2.2.3",
+    "pathlib>=1.0.1",
+    "scikit-learn>=1.6.1",
+    "seaborn>=0.13.2",
+]
