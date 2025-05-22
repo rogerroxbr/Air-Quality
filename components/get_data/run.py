@@ -64,4 +64,5 @@ if __name__ == "__main__":
     parser.add_argument("--artifact_type", type=str, help="Tipo do artefato (padrão: teste)")
     parser.add_argument("--artifact_description", type=str, default="Arquivo CSV baixado", help="Descrição do artefato (padrão: teste)")
     args = parser.parse_args()
+    print("ARGS:", args)
     go(args)
