@@ -61,10 +61,10 @@ def go(args):
 if __name__ == "__main__":
     import argparse
     parser = argparse.ArgumentParser(description="Download URL to a local destination e envia o CSV para o W&B")
-    parser.add_argument("--sample", type=str, required=True, help="URL da base para download")
-    parser.add_argument("--artifact_name", type=str, required=True, help="Nome do artefato no wandb (padrão: teste)")
-    parser.add_argument("--artifact_type", type=str, required=True, help="Tipo do artefato (padrão: teste)")
-    parser.add_argument("--artifact_description", type=str, required=True, help="Descrição do artefato (padrão: teste)")
+    parser.add_argument("--sample", type=str, help="URL da base para download")
+    parser.add_argument("--artifact_name", type=str, help="Nome do artefato no wandb (padrão: teste)")
+    parser.add_argument("--artifact_type", type=str, help="Tipo do artefato (padrão: teste)")
+    parser.add_argument("--artifact_description", type=str, help="Descrição do artefato (padrão: teste)")
     args = parser.parse_args()
     print("ARGS:", args)
     go(args)
