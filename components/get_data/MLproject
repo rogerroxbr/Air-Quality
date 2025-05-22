@@ -23,7 +23,8 @@ entry_points:
 
     command: >
         python run.py
-        --sample {sample}
+        
         --artifact_name {artifact_name}
         --artifact_type {artifact_type}
         --artifact_description {artifact_description}
+        --sample {sample}

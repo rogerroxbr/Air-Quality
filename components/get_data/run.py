@@ -62,6 +62,6 @@ if __name__ == "__main__":
     parser.add_argument("sample", type=str, help="URL da base para download")
     parser.add_argument("--artifact_name", type=str,  help="Nome do artefato no wandb (padrão: teste)")
     parser.add_argument("--artifact_type", type=str, help="Tipo do artefato (padrão: teste)")
-    parser.add_argument("--artifact_description", type=str, help="Descrição do artefato (padrão: teste)")
+    parser.add_argument("--artifact_description", type=str, default="Arquivo CSV baixado", help="Descrição do artefato (padrão: teste)")
     args = parser.parse_args()
     go(args)
