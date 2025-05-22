@@ -45,17 +45,6 @@ def extract_csv_from_zip(zip_path, extract_dir=None):
         logger.warning(f"Não foi possível deletar o arquivo zip: {e}")
     return csv_files
 
-def log_artifact(artifact_name, artifact_type, artifact_description, filename, wandb_run):
-    artifact = wandb.Artifact(
-        artifact_name,
-        type=artifact_type,
-        description=artifact_description,
-    )
-    artifact.add_file(filename)
-    wandb_run.log_artifact(artifact)
-    #artifact.wait()
-    logger.info(f"Artifact {artifact_name} logged to W&B.")
-
 def artifact_exists(project, artifact_name):
     api = wandb.Api()
     try:

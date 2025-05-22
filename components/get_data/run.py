@@ -4,7 +4,8 @@ import os
 import logging
 import wandb
 
-from components.get_data.utils.utils import download_file, extract_csv_from_zip, log_artifact, artifact_exists
+from wandb_utils.utils import download_file, extract_csv_from_zip, artifact_exists
+from wandb_utils.log_artifact import log_artifact
 
 logging.basicConfig(level=logging.INFO, format="%(asctime)-15s %(message)s")
 logger = logging.getLogger(__name__)
