@@ -1,0 +1,9 @@
+main:
+  components_repository: "https://github.com/rogerroxbr/Air-Quality#components"
+  project_name: "air-quality"
+  experiment_name: "development"
+  steps: all
+etl:
+  sample: "https://archive.ics.uci.edu/static/public/360/air+quality.zip"
+  artifact_name: "air_quality"
+  artifact_description: Raw_file_as_downloaded 
