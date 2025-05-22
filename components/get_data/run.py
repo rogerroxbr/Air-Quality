@@ -3,13 +3,14 @@ import argparse
 import os
 import logging
 import wandb
-
+import sys
 from wandb_utils.utils import download_file, extract_csv_from_zip, artifact_exists
 from wandb_utils.log_artifact import log_artifact
 
 logging.basicConfig(level=logging.INFO, format="%(asctime)-15s %(message)s")
 logger = logging.getLogger(__name__)
 
+print("sys.argv:", sys.argv)
 def go(args):
     os.makedirs("data", exist_ok=True)
     project = os.environ.get("WANDB_PROJECT")
