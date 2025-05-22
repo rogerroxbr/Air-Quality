@@ -21,7 +21,7 @@ entry_points:
         type: string
 
     command: >
-      python components/get_data/run.py
+      python run.py
         --sample {sample}
         --artifact_name {artifact_name}
         --artifact_type {artifact_type}
