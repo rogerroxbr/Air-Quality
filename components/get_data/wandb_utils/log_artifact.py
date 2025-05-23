@@ -5,34 +5,34 @@ import logging
 logging.basicConfig(level=logging.INFO, format="%(asctime)-15s %(message)s")
 logger = logging.getLogger(__name__)
 
-def log_artifact(artifact_name, artifact_type, artifact_description, filename, wandb_run):
+def log_artifact(nome_artefato, tipo_artefato, descricao_artefato, nome_arquivo, execucao_wandb):
     """
-    Log an artifact to Weights & Biases.
+    Registra um artefato no Weights & Biases.
 
-    Parameters
+    Parâmetros
     ----------
-    artifact_name : str
-        The name of the artifact.
-    artifact_type : str
-        The type of the artifact.
-    artifact_description : str
-        A brief description of the artifact.
-    filename : str
-        The path to the file to be uploaded as an artifact.
-    wandb_run : wandb.Run
-        The Weights & Biases run to log the artifact to.
+    nome_artefato : str
+        O nome do artefato.
+    tipo_artefato : str
+        O tipo do artefato.
+    descricao_artefato : str
+        Uma breve descrição do artefato.
+    nome_arquivo : str
+        O caminho para o arquivo a ser carregado como um artefato.
+    execucao_wandb : wandb.Run
+        A execução do Weights & Biases para registrar o artefato.
 
-    Returns
+    Retorna
     -------
-    None
+    Nada
     """
     
-    artifact = wandb.Artifact(
-        artifact_name,
-        type=artifact_type,
-        description=artifact_description,
+    artefato = wandb.Artifact(
+        nome_artefato,
+        type=tipo_artefato,
+        description=descricao_artefato,
     )
-    artifact.add_file(filename)
-    wandb_run.log_artifact(artifact)
-    #artifact.wait()
-    logger.info(f"Artifact {artifact_name} logged to W&B.")
+    artefato.add_file(nome_arquivo)
+    execucao_wandb.log_artifact(artefato)
+    #artefato.wait() # Mantido comentado, pois estava comentado no original
+    logger.info(f"Artefato {nome_artefato} registrado no W&B.")
